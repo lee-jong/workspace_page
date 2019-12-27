@@ -16,10 +16,10 @@ const Slide = ({}) => {
           <li></li>
         </ul>
         <p className="pos">
-          <label for="pos1"></label>
-          <label for="pos2"></label>
-          <label for="pos3"></label>
-          <label for="pos4"></label>
+          <label htmlFor="pos1"></label>
+          <label htmlFor="pos2"></label>
+          <label htmlFor="pos3"></label>
+          <label htmlFor="pos4"></label>
         </p>
       </div>
     </>

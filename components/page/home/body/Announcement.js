@@ -4,7 +4,7 @@ const Announcement = ({}) => {
   return (
     <>
       <div className="announcement_header">
-        <div classname="announcement_header_title">공지사항</div>
+        <div className="announcement_header_title">공지사항</div>
         <div className="announcement_header_more">더보기</div>
       </div>
       <div className="announcement_list">

@@ -1,6 +1,8 @@
 import React from 'react';
 import Cookies from 'js-cookie';
-import { handlePage } from '../../helpers/nextUtil';
+import Router from 'next/router';
+
+import { getToken } from '../../actions/login';
 
 class Login extends React.Component {
   state = {
@@ -19,10 +21,25 @@ class Login extends React.Component {
     });
   };
 
-  handleLogin = () => {
+  handleLogin = async () => {
     const { id, password } = this.state.login;
-    Cookies.getJSON('user', id);
-    handlePage('');
+
+    try {
+      let data = {
+        id,
+        password
+      };
+      let res = await getToken(data);
+      if (res.status == 200) {
+        Cookies.set('auth', res.token);
+        Router.push('/');
+      }
+      if (res.status !== 200) {
+        console.log('err', res);
+      }
+    } catch (err) {
+      console.log('err', err);
+    }
   };
 
   render() {

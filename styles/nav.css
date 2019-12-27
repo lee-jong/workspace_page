@@ -2,10 +2,10 @@ html,
 body,
 #__next,
 .main {
+  width: 1920px;
+  height: 1080px;
+  overflow: hidden;
   margin: 0;
-  height: 100%;
-  width: 100%;
-  overflow: auto;
 }
 
 .header {
@@ -68,17 +68,24 @@ body,
   padding-right: 4%;
 }
 
-.login {
+.login_before {
   width: 100%;
   height: 40%;
-  border: 1px solid black;
+  border: 1px solid rgba(175, 170, 170, 0.527);
+  margin-right: 7%;
+}
+
+.login_after {
+  width: 100%;
+  height: 40%;
+  border: 1px solid rgba(175, 170, 170, 0.527);
   margin-right: 7%;
 }
 
 .document {
   height: 100%;
   margin-top: 10%;
-  border: 1px solid black;
+  border: 1px solid rgba(175, 170, 170, 0.527);
 }
 
 .event {
@@ -100,6 +107,35 @@ body,
   height: 100%;
   padding-top: 15%;
   text-align: center;
+}
+
+.login_after_info {
+  width: 100%;
+  height: 100%;
+  padding-top: 15%;
+  text-align: center;
+  padding-left: 4%;
+}
+
+.login_after_info div:nth-child(1) {
+  width: 100%;
+  display: flex;
+  font-size: 80%;
+  font-weight: bold;
+}
+
+.login_after_info div:nth-child(2) {
+  width: 100%;
+  display: flex;
+}
+.login_after_info div:nth-child(2) div {
+  width: 20%;
+  padding-top: 4%;
+}
+.login_after_info div:nth-child(2) div:nth-child(2) {
+  padding-left: 2%;
+  font-size: 80%;
+  font-weight: bold;
 }
 
 .login_button button {
